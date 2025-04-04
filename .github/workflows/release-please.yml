@@ -17,6 +17,9 @@ jobs:
       with:
         release-type: simple
 
+    - run: echo "Release-Please Action completed successfully!"
+      if: ${{ steps.release-please.outputs.release_created == 'true' }}
+
     # - uses: actions/checkout@v2
 
     # - uses: actions/setup-node@v1
