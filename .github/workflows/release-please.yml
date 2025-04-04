@@ -15,22 +15,22 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: google-github-actions/release-please-action@v4
+    - uses: googleapis/release-please-action@v4
       id: release
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        release-type: node
+        release-type: simple
 
-    - uses: actions/checkout@v2
+    # - uses: actions/checkout@v2
 
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 20
-        registry-url: 'https://npm.pkg.github.com/'
+    # - uses: actions/setup-node@v1
+    #   with:
+    #     node-version: 20
+    #     registry-url: 'https://npm.pkg.github.com/'
 
-    - run: npm install npm@latest -g
-    - run: npm install
-    - run: npm run build
+    # - run: npm install npm@latest -g
+    # - run: npm install
+    # - run: npm run build
 
     # - name: push Deno release
     #   if: ${{ steps.release.outputs.release_created }}
@@ -45,16 +45,16 @@ jobs:
     #     git tag -a ${{ steps.release.outputs.tag_name }}-deno -m 'chore: ${{ steps.release.outputs.tag_name }} release'
     #     git push origin ${{ steps.release.outputs.tag_name }}-deno
 
-    - uses: actions/setup-node@v1
-      if: ${{ steps.release.outputs.release_created }}
-      with:
-        node-version: 14
-        registry-url: 'https://external-dot-oss-automation.appspot.com/'
+    # - uses: actions/setup-node@v1
+    #   if: ${{ steps.release.outputs.release_created }}
+    #   with:
+    #     node-version: 14
+    #     registry-url: 'https://external-dot-oss-automation.appspot.com/'
     
-    - run: npm install
-      if: ${{ steps.release.outputs.release_created }}
+    # - run: npm install
+    #   if: ${{ steps.release.outputs.release_created }}
 
-    - run: npm publish
-      if: ${{ steps.release.outputs.release_created }}
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - run: npm publish
+    #   if: ${{ steps.release.outputs.release_created }}
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
