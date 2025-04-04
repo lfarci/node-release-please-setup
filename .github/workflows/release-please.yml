@@ -1,24 +1,20 @@
-name: release-please
-
 on:
-    push:
-      branches:
-        - main
-
+  push:
+    branches:
+    - main
+  
 permissions:
-    contents: write
-    pull-requests: write
-    packages: write
+  contents: write
+  pull-requests: write
+
+name: release-please
 
 jobs:
   release-please:
-
     runs-on: ubuntu-latest
-    steps:
+    steps: 
     - uses: googleapis/release-please-action@v4
-      id: release
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         release-type: simple
 
     # - uses: actions/checkout@v2
