@@ -1,0 +1,31 @@
+{
+  "name": "lfarci-common-lib",
+  "version": "1.0.0",
+  "description": "Generic library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "author": {
+    "name": "Logan Farci",
+    "email": "logan.farci@avanade.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
