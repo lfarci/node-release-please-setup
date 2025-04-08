@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/lfarci/node-release-please-setup/compare/v1.0.0...v1.0.1) (2025-04-08)
+
+
+### Bug Fixes
+
+* add echo for the tag name ([9d3feeb](https://github.com/lfarci/node-release-please-setup/commit/9d3feeb7db00543e7ce249ba2b0b94f1c1d847b1))
+
 ## 1.0.0 (2025-04-04)
 
 
