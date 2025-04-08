@@ -19,8 +19,14 @@ jobs:
       with:
         release-type: simple
 
-    - run: echo "Release has been created successfully! Tag name \"${{ steps.release_please.outputs.tag_name == 'true' }}\""
+    - run: echo "Release has been created successfully!"
       if: ${{ steps.release_please.outputs.release_created == 'true' }}
+
+    - run: |
+        echo "Tag name: $tag_name"
+      if: ${{ steps.release_please.outputs.release_created == 'true' }}
+      env:
+        tag_name: ${{ steps.release_please.outputs.tag_name }}
 
     # - uses: actions/checkout@v2
 
