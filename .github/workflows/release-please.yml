@@ -19,7 +19,7 @@ jobs:
       with:
         release-type: simple
 
-    - run: echo "Release-Please Action completed successfully!"
+    - run: echo "Release has been created successfully! Tag name \"${{ steps.release_please.outputs.tag_name == 'true' }}\""
       if: ${{ steps.release_please.outputs.release_created == 'true' }}
 
     # - uses: actions/checkout@v2
