@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/lfarci/node-release-please-setup/compare/v1.0.1...v1.0.2) (2025-04-08)
+
+
+### Bug Fixes
+
+* add tag echo to the workflow ([5bc31e5](https://github.com/lfarci/node-release-please-setup/commit/5bc31e5dc4013c8b91671377ba3a0eddf5d1b610))
+
 ## [1.0.1](https://github.com/lfarci/node-release-please-setup/compare/v1.0.0...v1.0.1) (2025-04-08)
 
 
